@@ -1,5 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="LogInPage.aspx.cs" Inherits="PhotoAlbum.LogInPage" %>
 
+&nbsp;
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -58,7 +60,7 @@
                         <asp:Label ID="Label2" runat="server" Font-Bold="True" Font-Size="Medium" ForeColor="White" Text="UserName:"></asp:Label>
                     </td>
                     <td class="auto-style5">
-                        <asp:TextBox ID="UsernameBox" runat="server" Width="326px"></asp:TextBox>
+                        <asp:TextBox ID="UsernameBox" runat="server" Width="332px"></asp:TextBox>
                     </td>
                     <td class="auto-style7">
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="UsernameBox" ErrorMessage="Please Enter UserName!" Font-Bold="True" ForeColor="Red"></asp:RequiredFieldValidator>
@@ -66,10 +68,10 @@
                 </tr>
                 <tr>
                     <td class="auto-style3">
-                        <asp:Label ID="Label3" runat="server" Font-Bold="True" Font-Size="Medium" Text="Password:"></asp:Label>
+                        <asp:Label ID="Label3" runat="server" Font-Bold="True" Font-Size="Medium" Text="Password:" ForeColor="White"></asp:Label>
                     </td>
                     <td class="auto-style5">
-                        <asp:TextBox ID="Passwordbox" runat="server" Width="327px"></asp:TextBox>
+                        <asp:TextBox ID="Passwordbox" runat="server" Width="333px"></asp:TextBox>
                     </td>
                     <td class="auto-style7">
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="Passwordbox" ErrorMessage="Please Enter Password!" Font-Bold="True" ForeColor="Red"></asp:RequiredFieldValidator>
@@ -87,7 +89,7 @@
                 <tr>
                     <td class="auto-style9"></td>
                     <td class="auto-style10">
-                        <asp:Label ID="VaildCredlbl" runat="server"></asp:Label>
+                        <asp:Label ID="VaildCredlbl" runat="server" ForeColor="Red"></asp:Label>
                     </td>
                     <td class="auto-style11"></td>
                 </tr>
@@ -95,7 +97,7 @@
                     <td class="auto-style4">&nbsp;</td>
                     <td class="auto-style6">&nbsp;</td>
                     <td class="auto-style7">
-                        <asp:Label ID="ExceptLbl" runat="server"></asp:Label>
+                        <asp:Label ID="ExceptLbl" runat="server" ForeColor="Red"></asp:Label>
                     </td>
                 </tr>
             </table>
