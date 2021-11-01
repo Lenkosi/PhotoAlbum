@@ -107,6 +107,12 @@
                 <tr>
                     <td class="auto-style4">&nbsp;</td>
                     <td class="auto-style10">
+                        &nbsp;</td>
+                    <td class="auto-style9">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="auto-style4">&nbsp;</td>
+                    <td class="auto-style10">
                         <asp:Button ID="SignUpBtn" runat="server" BackColor="#666699" BorderColor="#666666" BorderStyle="Outset" Font-Bold="True" Text="Sign Up" Width="104px" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </td>
