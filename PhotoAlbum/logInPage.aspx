@@ -80,7 +80,7 @@
                 <tr>
                     <td class="auto-style4">&nbsp;</td>
                     <td class="auto-style8">
-                        <asp:Button ID="LogInBtn" runat="server" Text="Log In" Width="87px" />
+                        <asp:Button ID="LogInBtn" runat="server" Text="Log In" Width="87px" OnClick="LogInBtn_Click" />
                     </td>
                     <td>
                         <asp:LinkButton ID="NoSignUpLink" runat="server" Font-Size="Medium" ForeColor="White">No Account:Sign up</asp:LinkButton>

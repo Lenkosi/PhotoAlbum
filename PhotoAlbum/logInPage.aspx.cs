@@ -18,5 +18,10 @@ namespace PhotoAlbum
         {
 
         }
+
+        protected void LogInBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

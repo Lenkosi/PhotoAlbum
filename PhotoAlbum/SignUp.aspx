@@ -32,6 +32,14 @@
         }
         .auto-style8 {
             height: 25px;
+            text-align: left;
+        }
+        .auto-style9 {
+            text-align: left;
+        }
+        .auto-style10 {
+            text-align: center;
+            width: 248px;
         }
     </style>
 </head>
@@ -48,7 +56,9 @@
                     <td class="auto-style5">
                         <asp:TextBox ID="NameBox" runat="server" Width="239px"></asp:TextBox>
                     </td>
-                    <td>&nbsp;</td>
+                    <td class="auto-style9">
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="NameBox" ErrorMessage="Please Enter your name!!" Font-Bold="True" Font-Size="Medium" ForeColor="Red"></asp:RequiredFieldValidator>
+                    </td>
                 </tr>
                 <tr>
                     <td class="auto-style4">
@@ -57,7 +67,9 @@
                     <td class="auto-style5">
                         <asp:TextBox ID="SurnameBox" runat="server" Width="239px"></asp:TextBox>
                     </td>
-                    <td>&nbsp;</td>
+                    <td class="auto-style9">
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="SurnameBox" ErrorMessage="Please Enter Surname!!" Font-Bold="True" ForeColor="Red"></asp:RequiredFieldValidator>
+                    </td>
                 </tr>
                 <tr>
                     <td class="auto-style4">
@@ -66,7 +78,9 @@
                     <td class="auto-style5">
                         <asp:TextBox ID="EmailBox" runat="server" Width="239px"></asp:TextBox>
                     </td>
-                    <td>&nbsp;</td>
+                    <td class="auto-style9">
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="EmailBox" ErrorMessage="Invaild Email Address" Font-Bold="True" Font-Size="Medium" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+                    </td>
                 </tr>
                 <tr>
                     <td class="auto-style4">
@@ -75,7 +89,9 @@
                     <td class="auto-style5">
                         <asp:TextBox ID="SignPassBox" runat="server" Width="238px"></asp:TextBox>
                     </td>
-                    <td>&nbsp;</td>
+                    <td class="auto-style9">
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="SignPassBox" ErrorMessage="Please enter Password!!" Font-Bold="True" Font-Size="Medium" ForeColor="Red"></asp:RequiredFieldValidator>
+                    </td>
                 </tr>
                 <tr>
                     <td class="auto-style6">
@@ -84,20 +100,25 @@
                     <td class="auto-style7">
                         <asp:TextBox ID="ConfirmBox" runat="server" Width="238px"></asp:TextBox>
                     </td>
-                    <td class="auto-style8"></td>
-                </tr>
-                <tr>
-                    <td class="auto-style4">&nbsp;</td>
-                    <td class="auto-style5">
-                        <asp:Button ID="SignUpBtn" runat="server" BackColor="#666699" BorderColor="#666666" BorderStyle="Outset" Font-Bold="True" Text="Sign Up" Width="84px" />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:Button ID="Button2" runat="server" BackColor="#666699" BorderColor="#666666" Font-Bold="True" Text="Clear" Width="79px" />
+                    <td class="auto-style8">
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="ConfirmBox" ErrorMessage="Please enter correct confirm!!" Font-Bold="True" Font-Size="Medium" ForeColor="Red"></asp:RequiredFieldValidator>
                     </td>
-                    <td>&nbsp;</td>
                 </tr>
                 <tr>
                     <td class="auto-style4">&nbsp;</td>
-                    <td class="auto-style5">&nbsp;</td>
+                    <td class="auto-style10">
+                        <asp:Button ID="SignUpBtn" runat="server" BackColor="#666699" BorderColor="#666666" BorderStyle="Outset" Font-Bold="True" Text="Sign Up" Width="104px" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </td>
+                    <td class="auto-style9">
+                        <asp:Button ID="Button2" runat="server" BackColor="#666699" BorderColor="#666666" Font-Bold="True" Text="Clear" Width="79px" />
+                    &nbsp; </td>
+                </tr>
+                <tr>
+                    <td class="auto-style4">&nbsp;</td>
+                    <td class="auto-style10">
+                        <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="SignPassBox" ControlToValidate="ConfirmBox" ErrorMessage="Password don't match" Font-Bold="True" Font-Size="Medium"></asp:CompareValidator>
+                    </td>
                     <td>&nbsp;</td>
                 </tr>
             </table>
