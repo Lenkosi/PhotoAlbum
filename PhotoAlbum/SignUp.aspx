@@ -41,6 +41,12 @@
             text-align: center;
             width: 248px;
         }
+        .auto-style11 {
+            margin-left: 0px;
+        }
+        .auto-style12 {
+            width: 248px;
+        }
     </style>
 </head>
 <body>
@@ -105,25 +111,40 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style4">&nbsp;</td>
+                    <td class="auto-style4">
+                        <asp:Label ID="Label7" runat="server" Font-Bold="True" Font-Size="Medium" ForeColor="White" Text="Username:"></asp:Label>
+                    </td>
                     <td class="auto-style10">
-                        &nbsp;</td>
-                    <td class="auto-style9">&nbsp;</td>
+                        <asp:TextBox ID="UserSignUpTxt" runat="server" CssClass="auto-style11" Width="240px"></asp:TextBox>
+                    </td>
+                    <td class="auto-style9">
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="UserSignUpTxt" ErrorMessage="Create A Username!!" Font-Bold="True" ForeColor="Red"></asp:RequiredFieldValidator>
+                    </td>
                 </tr>
                 <tr>
-                    <td class="auto-style4">&nbsp;</td>
-                    <td class="auto-style10">
-                        <asp:Button ID="SignUpBtn" runat="server" BackColor="#666699" BorderColor="#666666" BorderStyle="Outset" Font-Bold="True" Text="Sign Up" Width="104px" />
+                    <td class="auto-style4">
+                        <asp:Button ID="CancelBtn" runat="server" BackColor="#666699" BorderColor="#666666" BorderStyle="Outset" Font-Bold="True" OnClick="CancelBtn_Click" Text="Cancel" Width="95px" />
+                    </td>
+                    <td class="auto-style12">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:Button ID="SignUpBtn" runat="server" BackColor="#666699" BorderColor="#666666" BorderStyle="Outset" Font-Bold="True" Text="Sign Up" Width="104px" OnClick="SignUpBtn_Click" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </td>
                     <td class="auto-style9">
-                        <asp:Button ID="Button2" runat="server" BackColor="#666699" BorderColor="#666666" Font-Bold="True" Text="Clear" Width="79px" />
+                        <asp:Button ID="Button2" runat="server" BackColor="#666699" BorderColor="#666666" Font-Bold="True" Text="Clear" Width="79px" OnClick="Button2_Click" />
                     &nbsp; </td>
                 </tr>
                 <tr>
                     <td class="auto-style4">&nbsp;</td>
                     <td class="auto-style10">
-                        <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="SignPassBox" ControlToValidate="ConfirmBox" ErrorMessage="Password don't match" Font-Bold="True" Font-Size="Medium"></asp:CompareValidator>
+                        <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="SignPassBox" ControlToValidate="ConfirmBox" ErrorMessage="Password don't match" Font-Bold="True" Font-Size="Medium" ForeColor="Red"></asp:CompareValidator>
+                    </td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="auto-style4">&nbsp;</td>
+                    <td class="auto-style10">
+                        <asp:Label ID="ExceptionLBL" runat="server" Font-Bold="True" Font-Size="Medium" ForeColor="Red"></asp:Label>
                     </td>
                     <td>&nbsp;</td>
                 </tr>

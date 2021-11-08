@@ -34,6 +34,7 @@
         .auto-style8 {
             text-align: center;
             width: 332px;
+            height: 30px;
         }
         .auto-style9 {
             width: 318px;
@@ -45,6 +46,13 @@
         }
         .auto-style11 {
             height: 25px;
+        }
+        .auto-style12 {
+            width: 318px;
+            height: 30px;
+        }
+        .auto-style13 {
+            height: 30px;
         }
     </style>
 </head>
@@ -78,12 +86,12 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style4">&nbsp;</td>
+                    <td class="auto-style12"></td>
                     <td class="auto-style8">
                         <asp:Button ID="LogInBtn" runat="server" Text="Log In" Width="87px" OnClick="LogInBtn_Click" />
                     </td>
-                    <td>
-                        <asp:LinkButton ID="NoSignUpLink" runat="server" Font-Size="Medium" ForeColor="White">No Account:Sign up</asp:LinkButton>
+                    <td class="auto-style13">
+                        <asp:LinkButton ID="NoSignUpLink" runat="server" Font-Size="Medium" ForeColor="White" OnClick="NoSignUpLink_Click">No Account:Sign up</asp:LinkButton>
                     </td>
                 </tr>
                 <tr>
