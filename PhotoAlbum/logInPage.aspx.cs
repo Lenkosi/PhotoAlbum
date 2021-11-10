@@ -56,7 +56,7 @@ namespace PhotoAlbum
                     {
                         Session["Username"] = username;
                         Session["Password"] = password;
-                        //add the dashboard page here
+                        Response.Redirect("Dashboard.aspx");
                     }
                     else if(username !=DataReader.GetString(0) && password != DataReader.GetString(1))
                     {
