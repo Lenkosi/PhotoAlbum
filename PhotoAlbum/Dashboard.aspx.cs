@@ -49,5 +49,26 @@ namespace PhotoAlbum
         {
             fill();
         }
+
+        protected void LinkButton1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("logInPage.aspx"); 
+        }
+
+        protected void SearchBtn_Click(object sender, EventArgs e)
+        {
+            conn.Open();
+            SqlCommand sqlcomm = new SqlCommand();
+            String sqlQuery = "select * from Images where Image like '%'+@Image+'%'";
+            sqlcomm.CommandText = sqlQuery;
+            sqlcomm.Connection = conn;
+            sqlcomm.Parameters.AddWithValue("Image", SearchBox.Text);
+            DataTable dt = new DataTable();
+            SqlDataAdapter sda = new SqlDataAdapter(sqlcomm);
+            sda.Fill(dt);
+            GridView1.DataSource = dt;
+            GridView1.DataBind();
+            conn.Close();
+        }
     }
 }

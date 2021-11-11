@@ -44,7 +44,7 @@ namespace PhotoAlbum
                 conn.Close();
                 //if(Session["Username"].ToString() !=null && Session["Password"].ToString() != null) 
                 //{
-                    Response.Redirect("loglnPage.aspx");
+                    Response.Redirect("logInPage.aspx");
                 //}
             }
             catch(Exception ex)
@@ -66,7 +66,7 @@ namespace PhotoAlbum
 
         protected void CancelBtn_Click(object sender, EventArgs e)
         {
-            Response.Redirect("loglnPage.aspx");
+            Response.Redirect("logInPage.aspx");
         }
     }
 }

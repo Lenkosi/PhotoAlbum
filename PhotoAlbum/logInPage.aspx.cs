@@ -29,7 +29,7 @@ namespace PhotoAlbum
 
         protected void LinkButton1_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("SignUp.aspx");
         }
         public void loginQuery(String sql, String connection)
         {
