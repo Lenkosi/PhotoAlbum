@@ -13,7 +13,7 @@ namespace PhotoAlbum
    
     public partial class Dashboard : System.Web.UI.Page
     {
-        SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\KHWEZI\Documents\PhotoAlbum.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection conn = new SqlConnection(@"Data Source=Khwezii;Initial Catalog=PhotoAlbum;Integrated Security=True");
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -48,6 +48,59 @@ namespace PhotoAlbum
         protected void viewBtn_Click(object sender, EventArgs e)
         {
             fill();
+        }
+
+        protected void LinkButton1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("logInPage.aspx"); 
+        }
+
+        protected void SearchBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                conn.Open();
+                SqlCommand sqlcomm = new SqlCommand();
+                String sqlQuery = "select * from Images where Image like '%'+@Image+'%'";
+                sqlcomm.CommandText = sqlQuery;
+                sqlcomm.Connection = conn;
+                sqlcomm.Parameters.AddWithValue("Image", SearchBox.Text);
+                DataTable dt = new DataTable();
+                SqlDataAdapter sda = new SqlDataAdapter(sqlcomm);
+                sda.Fill(dt);
+                GridView1.DataSource = dt;
+                GridView1.DataBind();
+                conn.Close();
+
+            }
+            catch(SqlException ex)
+            {
+                ExLabel.Text = ex.Message;
+            }
+            
+        }
+
+        protected void deletebtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                SqlDataAdapter da;
+                SqlCommand comm = new SqlCommand();
+                da = new SqlDataAdapter();
+                conn.Open();
+                String query = "DELETE FROM [Images] WHERE Image LIKE '" + DeleteBox.Text + "'";
+                comm = new SqlCommand(query, conn);
+                da.DeleteCommand = new SqlCommand(query, conn);
+                da.DeleteCommand.ExecuteNonQuery();
+
+                comm.Dispose();
+                conn.Close();
+
+            }
+            catch(SqlException ex)
+            {
+                ExLabel.Text = ex.Message;
+            }
         }
     }
 }

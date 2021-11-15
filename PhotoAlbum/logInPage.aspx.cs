@@ -21,7 +21,7 @@ namespace PhotoAlbum
         public String username = "";
         public String password = "";
 
-        public String connection = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\KHWEZI\Documents\PhotoAlbum.mdf;Integrated Security=True;Connect Timeout=30";
+        public String connection = @"Data Source=Khwezii;Initial Catalog=PhotoAlbum;Integrated Security=True";
 		protected void Page_Load(object sender, EventArgs e)
 		{
 
@@ -29,7 +29,7 @@ namespace PhotoAlbum
 
         protected void LinkButton1_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("SignUp.aspx");
         }
         public void loginQuery(String sql, String connection)
         {

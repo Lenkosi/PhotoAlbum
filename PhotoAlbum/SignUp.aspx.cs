@@ -17,7 +17,7 @@ namespace PhotoAlbum
         public SqlConnection conn;
         public String sql;
 
-        public String connection = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\KHWEZI\Documents\PhotoAlbum.mdf;Integrated Security=True;Connect Timeout=30";
+        public String connection = @"Data Source=Khwezii;Initial Catalog=PhotoAlbum;Integrated Security=True";
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -44,7 +44,7 @@ namespace PhotoAlbum
                 conn.Close();
                 //if(Session["Username"].ToString() !=null && Session["Password"].ToString() != null) 
                 //{
-                    Response.Redirect("loglnPage.aspx");
+                    Response.Redirect("logInPage.aspx");
                 //}
             }
             catch(Exception ex)
@@ -66,7 +66,7 @@ namespace PhotoAlbum
 
         protected void CancelBtn_Click(object sender, EventArgs e)
         {
-            Response.Redirect("loglnPage.aspx");
+            Response.Redirect("logInPage.aspx");
         }
     }
 }

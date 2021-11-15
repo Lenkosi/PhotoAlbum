@@ -93,7 +93,7 @@
                         <asp:Label ID="Label5" runat="server" Font-Bold="True" Font-Size="Medium" ForeColor="White" Text="Password:"></asp:Label>
                     </td>
                     <td class="auto-style5">
-                        <asp:TextBox ID="SignPassBox" runat="server" Width="238px"></asp:TextBox>
+                        <asp:TextBox ID="SignPassBox" runat="server" Width="238px" TextMode="Password"></asp:TextBox>
                     </td>
                     <td class="auto-style9">
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="SignPassBox" ErrorMessage="Please enter Password!!" Font-Bold="True" Font-Size="Medium" ForeColor="Red"></asp:RequiredFieldValidator>
@@ -104,7 +104,7 @@
                         <asp:Label ID="Label6" runat="server" Font-Bold="True" ForeColor="White" Text="Confirm Password"></asp:Label>
                     </td>
                     <td class="auto-style7">
-                        <asp:TextBox ID="ConfirmBox" runat="server" Width="238px"></asp:TextBox>
+                        <asp:TextBox ID="ConfirmBox" runat="server" Width="238px" TextMode="Password"></asp:TextBox>
                     </td>
                     <td class="auto-style8">
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="ConfirmBox" ErrorMessage="Please enter correct confirm!!" Font-Bold="True" Font-Size="Medium" ForeColor="Red"></asp:RequiredFieldValidator>

@@ -10,6 +10,9 @@
     <style type="text/css">
         .auto-style1 {
             text-align: center;
+            height: 1080px;
+            position: inherit;
+            width: 1620px;
         }
         .auto-style2 {
             width: 100%;
@@ -58,7 +61,7 @@
 </head>
 <body style="height: 1080px">
     <form id="form1" runat="server">
-        <div class="auto-style1" style="background-position: center center; background-image: url('background Images/mark-autumns-Ssr26I0QWVY-unsplash.jpg'); color: #FFFFFF; height: 1080px; position: inherit; width: 1620px; background-repeat: no-repeat;">
+        <div class="auto-style1" style="background-position: center center; background-image: url('background%20Images/mark-autumns-Ssr26I0QWVY-unsplash.jpg'); color: #FFFFFF; background-repeat: no-repeat;">
             <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Size="XX-Large" Text="PhotoAlbum"></asp:Label>
             <br />
             <br />
@@ -79,7 +82,7 @@
                         <asp:Label ID="Label3" runat="server" Font-Bold="True" Font-Size="Medium" Text="Password:" ForeColor="White"></asp:Label>
                     </td>
                     <td class="auto-style5">
-                        <asp:TextBox ID="Passwordbox" runat="server" Width="333px"></asp:TextBox>
+                        <asp:TextBox ID="Passwordbox" runat="server" Width="333px" TextMode="Password"></asp:TextBox>
                     </td>
                     <td class="auto-style7">
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="Passwordbox" ErrorMessage="Please Enter Password!" Font-Bold="True" ForeColor="Red"></asp:RequiredFieldValidator>
