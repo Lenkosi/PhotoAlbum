@@ -52,7 +52,7 @@ namespace PhotoAlbum
 
         protected void LinkButton1_Click(object sender, EventArgs e)
         {
-            Response.Redirect("logInPage.aspx"); 
+            Response.Redirect("Default.aspx"); 
         }
 
         protected void SearchBtn_Click(object sender, EventArgs e)
@@ -68,8 +68,8 @@ namespace PhotoAlbum
                 DataTable dt = new DataTable();
                 SqlDataAdapter sda = new SqlDataAdapter(sqlcomm);
                 sda.Fill(dt);
-                GridView1.DataSource = dt;
-                GridView1.DataBind();
+                viewImages1.DataSource = dt;
+                viewImages1.DataBind();
                 conn.Close();
 
             }
@@ -95,12 +95,18 @@ namespace PhotoAlbum
 
                 comm.Dispose();
                 conn.Close();
+                fill();
 
             }
             catch(SqlException ex)
             {
                 ExLabel.Text = ex.Message;
             }
+        }
+
+        protected void DownloadLink_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

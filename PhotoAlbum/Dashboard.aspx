@@ -51,11 +51,11 @@
             width: 199px;
         }
         .auto-style16 {
-            height: 255px;
+            height: 298px;
         }
         .auto-style17 {
             width: 732px;
-            height: 255px;
+            height: 298px;
         }
         .auto-style19 {
             width: 165px;
@@ -65,7 +65,7 @@
             width: 348px;
         }
         .auto-style22 {
-            height: 255px;
+            height: 298px;
             width: 348px;
         }
         .auto-style23 {
@@ -94,6 +94,16 @@
         }
         .auto-style31 {
             height: 202px;
+        }
+        .auto-style32 {
+            height: 23px;
+        }
+        .auto-style33 {
+            width: 100%;
+            height: 42px;
+        }
+        .auto-style34 {
+            height: 30px;
         }
     </style>
 </head>
@@ -188,11 +198,32 @@
                 <tr>
                     <td class="auto-style22"></td>
                     <td class="auto-style17">
-                        <asp:DataList ID="viewImages1" runat="server" RepeatColumns="4" RepeatDirection="Horizontal">
+                        <asp:DataList ID="viewImages1" runat="server" RepeatColumns="4" RepeatDirection="Horizontal" Width="145px">
                             <ItemTemplate>
-                                <image src="Images/<%#Eval("Image") %>" height="150" width="180" />
+                                <table class="auto-style33">
+                                    <tr>
+                                        <td class="auto-style32">
+                                            <table class="auto-style4">
+                                                <tr>
+                                                    <td class="auto-style34">
+                                                        <asp:Label ID="Label1" runat="server" Text='<%#Eval("Image") %>'></asp:Label></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="auto-style34"> <image src="Images/<%#Eval("Image")%>" height ="150" width="180" /></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <asp:LinkButton ID="DownloadLink" runat="server" Font-Bold="True" ForeColor="White" OnClick="DownloadLink_Click">Download</asp:LinkButton></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                               
                             </ItemTemplate>
+
                         </asp:DataList>
+                        <br />
                     </td>
                     <td class="auto-style16">
                         <asp:GridView ID="GridView1" runat="server" EmptyDataText="No Picture Found" Height="100px" ForeColor="Black">
